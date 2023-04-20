@@ -1,0 +1,496 @@
+/* to all html files */
+body, html{ /*set the height and margin to whole web site*/
+    height: 100%;
+    margin:0;
+}
+
+@font-face { /* sent font face */
+    font-family: myfont;
+    src: url(https://fonts.google.com/specimen/EB+Garamond);
+}
+
+h1{ /* set font size and alignment color and shadow for all h1 elements */
+    font-size: 36px;
+    text-align: center;
+    color: rgb(45, 10, 45);
+    text-shadow: 2px 2px 5px rgb(206, 122, 225);
+}
+
+table{ /* set properties for tables in the site */
+    width: 70vw;
+    border-style: solid;
+    border-color: darkslateblue;
+    border-radius: 15px; 
+    margin-right: auto; 
+    margin-left: auto;
+    border-collapse: collapse;
+}
+
+ section p{ /* add styling to p descendant of section  */
+    font-size: 18px;
+    text-align: justify;
+    padding: 8px;
+}
+
+p:first-of-type::first-letter{ /* fold first letter of first p */
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+section > h2{ /* styling h2 childs of section */
+    font-size: 25px;
+    text-align: center;
+    text-shadow: -10px 10px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* styling home page of the site */
+.bg {
+    background-image: url("img/Maroon-5.png");/* set background image to home page */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size : cover;
+    background-color: #464646; 
+    width : 100%;
+    height : 100%;
+}
+
+.caption{ /* caption inside the background photo */
+    position: absolute;
+    left:0;
+    top:35%;
+    width:100%;
+    text-align: center;
+    color: black;
+}
+
+.caption span.border{ /*styling caption of the image */
+    color: rgb(255, 255, 255);
+    padding: 15px;
+    font-size: 50px;
+    letter-spacing: 10px;
+}
+
+img[alt="logo"]{ /* set size to the logo in nav bar */
+    width: 45px;
+    left: 0;
+}
+
+.twitterfeed{ /* container for the tweeterfeed */
+    height: 500px;
+    width: 200px;
+    left: 10px;
+    top: 100px;
+}
+
+@media only screen and (max-width:620px){ /* make home page responsive */
+    .caption span.border, .twitterfeed{
+        width:90%;
+    }
+}
+
+.nav{ /* fix navigation bar's position */
+    position: fixed;
+    right:0;
+    background-color: rgba(255, 255, 255, 0.4);
+    z-index: 99;
+}
+
+.nav a { /* styling the hyperlinks of nav bar */
+    text-decoration: none;
+    display: block;
+    color: black;
+    background-color: transparent;
+    padding:10px 15px 10px 15px;
+    font-size: 1.5vw;
+    text-transform: uppercase;
+    font-weight: bold;
+    display:inline-block;
+}
+
+.nav a:hover{ /* put hover pseudo class */
+    background-color: black;
+    color: white;
+}
+
+/* css parts of about us page */
+#vid{ /*align middle container of the main container */
+    width: 58%;
+    text-align: center;
+    border-radius: 0;
+    float: left;
+    padding-left: 15px;
+}
+
+#aboutleft{ /* align left container of the main container */
+    width:19%;
+    float: left;
+    padding-left: 15px;
+}
+
+#aboutright{ /* align right container of the main container */
+    width:19%;
+    right: 0;
+    float: left;
+    padding-left: 15px;
+}
+
+.container1 { /* positioning the social media links */
+    width: 2.5%;
+    position:absolute;
+    right:0;
+    bottom: 0;
+    padding: 1%;
+}
+
+.container1 img{ /* styling social media images */
+    width:100%;
+    opacity: 0.5;
+}
+
+.container article{ /* container for social media images */
+    width: 25%;
+    display: inline-block;
+}
+
+.container1 img:hover{ /* using hover effect for the social media */
+    opacity: 1;
+}
+
+@media only screen and (max-width:620px){ /* setting up responsive mode for about us page */
+    #aboutleft, #vid, #aboutright{
+        width:90%;
+    }
+}
+
+.container { /* image container for video links */
+    position: relative;
+    max-width: 49%;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+  }
+  
+.image { /* transition for image blocks*/
+    position: relative;
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility :hidden;
+  }
+  
+.middle { /* white background appearing when hoverin */
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+.container:hover .image { /* opacity of the image when hovering */
+    opacity: 0.7;
+  }
+  
+.container:hover .middle { /* opacity of the white background when hovering */
+    opacity: 1;
+  }
+  
+.text { /* text in the middle of the image */
+    color: black;
+    font-size: 40px;
+    padding: 16px 32px;
+}
+
+#albumsbg{  /* gradient background for the page */
+    background-image: linear-gradient(to bottom, #e3eeec9d,#9bc9e7);
+    background-attachment: fixed;
+}
+
+.album{ /* positioning some images */
+    width: 99%;
+    text-align: center;
+}
+
+.album a{ /* styling hyperlinks */
+text-decoration: none;
+color: black;
+font-size: 18px;
+}
+
+img[alt~="Album"]{ /* styling images */
+    width:100%;
+    transition: width 1s ;
+}
+img[alt~="Album"]:hover{ /* using hover effect */
+    width : 103%
+}
+
+#toptable{
+    width: 100vw;
+}
+
+/*-------------------------------Styling Table-----------------------*/
+tr th:first-child{ 
+    background-color:rgb(12, 188, 71);
+    border-radius: 5px;
+    height: 35px;
+}
+tr th{
+    background-color: aquamarine;
+    border-style: solid;
+    border-color: darkblue;
+    border-radius: 5px;
+}
+tr td{
+    border-style: solid;
+    border-color: gray;
+    height: 25px;
+}
+
+tr td:nth-of-type(5){
+    background-color: goldenrod;
+}
+
+th:nth-child(5){
+    background-color:crimson;
+}
+td:not(:last-of-type){
+    background-color:#ccc;
+}
+/*-------------------------styling blog page----------------------*/
+.bheader{
+    font-size: 40px;
+    animation: textcolor 5s infinite;
+
+}
+@keyframes textcolor{ /* configuring animation */
+    0%{color: rgb(255, 0, 0);}
+    25%{color:goldenrod;}
+    75%{color: rgb(20, 220, 40);}
+    100%{color: rgb(23, 53, 225);}
+
+}
+
+.blog_head{ /* styling header */
+    background-image: linear-gradient(to right ,rgba(119, 255, 162, 0.636), rgba(255, 255, 61, 0.756),rgba(119, 255, 162, 0.636));
+    padding:5px;
+    text-align:center;
+}
+
+.blog_1_main { /* positioning containers */
+    float: left;
+    width: 55%;
+    padding: 0 20px;
+  }
+  
+  .blog_1_right { /* positioning containers */
+    background-color: rgba(6, 37, 100, 0.5);
+    float: left;
+    width: 39%;
+    padding: 15px;
+    margin-top: 7px;
+    margin-left: 7px;
+    text-align: center;
+    border-radius: 15px;
+  }
+
+  #pempty{
+    color: #9bc9e7;
+
+  }
+  
+  @media only screen and (max-width: 620px) { /* making blog page responsive */
+    .blog_1_main, .blog_1_right {
+      width: 90%;
+    }
+  }
+
+ /*------------------------------ styling images attributes ---------------------------------*/ 
+img[alt~="blog_1"]{ 
+    max-width:100%;
+} 
+img[alt~="blog_2"]{
+    max-width:100%;
+    transition: width 1s;
+} 
+img[alt~="blog_2"]:hover{
+    width : 97%
+}
+.blog_2_left{ /* styling containers */
+    background-color: rgba(128, 255, 0, 0.5);
+    float: left;
+    width: 39%;
+    padding: 15px;
+    margin-top: 7px;
+    margin-left: 7px;
+    text-align: center;
+    border-radius: 15px;
+}
+#texteffect {
+    word-break: keep-all;
+  }
+  
+
+@media only screen and (max-width: 620px) { /* make blog page responsive */
+    .blog_1_main, .blog_2_left {
+      width: 90%;
+    }
+  }
+ /*-------------------------styling form page -------------------------------  */ 
+  .form_container{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+    background-color: aquamarine;
+    border-radius: 10px;
+  }
+  input[type=text], select, textarea{ /* styling input element */
+    width: 90%;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    resize: vertical;
+    margin: 0;
+    display: inline-block;
+  }
+
+  input[type=email]{ /* styling email input */
+    width: 90%;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    resize: vertical;
+    margin: 0;
+    display: inline-block;
+  }
+
+  label{ 
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+
+input[type=submit] { /* styling sumbit input element */
+    width:100px;
+    background-color: lightseagreen;
+    color: black;
+    padding: 10px;
+    border-radius: 15px;
+    cursor:default;
+    font-size: 15px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+
+input + span { /* styling immedietly after span */
+    position: relative;
+  }
+  
+  input + span::before {
+    position: absolute;
+    right: -20px;
+    top: 5px;
+  }
+  
+  input:invalid { /* styling input */
+    border: 2px solid red;
+  }
+input:invalid + span::before {
+    content: "✖";
+    color: red;
+  }
+  
+  input:valid + span::before {
+    content: "✓";
+    color: green;
+  }
+
+ /*--------------------------- Styling footer  -------------------------------*/ 
+footer{
+    
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #111;
+    height: auto;
+    width: 100vw;
+    padding-top: 10px;
+    color: #fff;
+}
+.footer_content{ /* styling elements inside the footer */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+.footer_content h3{ /* styling header tag */
+    font-size: 32px;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 10px;
+}
+
+.social_media{ /* postioning icon elements */
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0 25px 0;
+}
+
+.social_media li{ /* positioning the list */
+    margin: 0 15px;
+}
+
+.social_media a{ /* styling socil media links */
+    text-decoration: none;
+    color: #fff;
+    border: 1.1px solid white;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.social_media a i{ /* styling social media icons */
+    font-size: 17px;
+    width: 20px;
+    transition: color .4s ease;
+}
+
+.social_media a:hover i{
+    color: rgb(0, 42, 255);
+}
+
+/*----------------styling bottom of the footer -----------------------*/
+.footer_b{
+    background: #000;
+    width: 100vw;
+    padding-top: 0;
+    padding-bottom: 80px;
+    text-align: center;
+}
+
+.footer_b p{
+    float: left;
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+ }
+ .footer_b p a{
+   color:#48dc4f;
+   font-size: 16px;
+   text-decoration: none;
+ }
+ .footer_b span{
+     text-transform: uppercase;
+     opacity: .4;
+     font-weight: 200;
+ }
